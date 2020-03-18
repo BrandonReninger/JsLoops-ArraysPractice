@@ -4,6 +4,9 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+    arr.push(arr.shift());
+    console.log(arr)
+    return arr;
 }
 
 
@@ -16,6 +19,7 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    return Math.max.apply(null, arr)
 }
 
 
@@ -27,7 +31,13 @@ function largestNum(arr) {
 // input:  [4, 2, 1, 7]
 // output: [16, 8, 4, 28]
 
+
+
 function elemsTimesLength(arr) {
+    for (i = 0; i < arr.length; i++) {
+        arr = arr[i] * arr.length;
+    }
+    return [arr];
 }
 
 
@@ -92,12 +102,44 @@ function flightCost(destination, firstClass) {
 // output: { error: "No user with that id." } 
 
 
-let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'Peter' },
-{ id: 17, name: 'St. MaryLou de la Playa Carmen' }, { id: 51, name: 'Doug' },
-{ id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
+let staff = [{
+        id: 1,
+        name: 'Jon'
+    }, {
+        id: 2,
+        name: 'Yuli'
+    }, {
+        id: 21,
+        name: 'Peter'
+    },
+    {
+        id: 17,
+        name: 'St. MaryLou de la Playa Carmen'
+    }, {
+        id: 51,
+        name: 'Doug'
+    },
+    {
+        id: 881,
+        name: 'Paul'
+    }, {
+        id: 0,
+        name: 'Jon'
+    }, {
+        id: 999,
+        name: 'Timma'
+    }
+]
 
 function findById(id) {
+    let number = (staff[i].id);
 
+    for (i = 0; i < staff.length; i++) {
+        if (number !== (staff[i].id))
+    }
+    throw new error("no user with that id")
+} else if (number == (staff[i].id)) {
+    return
 }
 
 
@@ -123,5 +165,4 @@ let theBand = {
     }]
 }
 
-function bandMemberDetails(name) {
-}
+function bandMemberDetails(name) {}

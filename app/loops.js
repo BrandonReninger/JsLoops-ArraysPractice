@@ -4,7 +4,12 @@
 // output: 20
 
 function rangeTotal(n1, n2) {
-
+    let sum = 0;
+    for (i = n1; i <= n2; i++) {
+        sum += i;
+    }
+    console.log(sum);
+    return sum;
 }
 
 
@@ -19,15 +24,23 @@ function rangeTotal(n1, n2) {
 // 1*2*3*4 = 24
 
 function factorials(num) {
-
+    let total = num;
+    if (num === 0 || num === 1)
+        return 1;
+    while (num > 1) {
+        num--;
+        total *= num;
+    }
+    return total;
 }
+
 
 
 // ------------------------------------------
 
 
 // 3. Write a function that will take in a starting number, ending number, and a divisor. Iterate
-// over the range of the numbers and rtuen how many numbers can be divided by the divisor.
+// over the range of the numbers and return how many numbers can be divided by the divisor.
 // Example:
 // input: 15, 20, 5
 // output: 2
